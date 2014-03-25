@@ -1,0 +1,21 @@
+<Alloy>
+	<NavigationWindow id="navigation">
+		<Window class="container" title="ログイン / ユーザ登録">
+			<ScrollView>
+				<Label>ユーザID</Label>
+				<TextField id="loginUsername"/>
+				<Label>パスワード</Label>
+				<TextField id="loginPassword"/>
+				<Button onClick="doLogin">ログイン</Button>
+				<View id="border"/>
+				<Label>ユーザID</Label>
+				<TextField id="createUsername"/>
+				<Label>パスワード</Label>
+				<TextField id="createPassword"/>
+				<Label>パスワード（確認）</Label>
+				<TextField id="createConfirm"/>
+				<Button onClick="doCreate">ユーザ登録</Button>
+			</ScrollView>
+		</Window>
+	</NavigationWindow>
+</Alloy>

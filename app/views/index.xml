@@ -1,0 +1,34 @@
+<Alloy>
+	<NavigationWindow platform="ios">
+		<Window class="container" title="myTODO">
+			<View id="addtask">
+				<TextField id="textfield" hintText="New task">
+					<KeyboardToolbar>
+						<Toolbar>
+							<Items>
+								<Button id="cancelbutton" onClick="doCancel"/>
+								<FlexSpace/>
+								<Button id="addbutton" onClick="doAddtask"/>
+							</Items>
+						</Toolbar>
+					</KeyboardToolbar>
+				</TextField>
+			</View>
+			<TableView id="table" dataCollection="todos" dataTransform="doTransform" dataFilter="doFilter">
+				<TableViewRow taskid="{id}">
+					<Label id="task" text="{task}"/>
+					<Label id="created_at" text="{created_at}"/>
+				</TableViewRow>
+			</TableView>
+			<View id="footer">
+				<TabbedBar id="tab" onClick="doTab">
+					<Labels>
+						<Label>未完了</Label>
+						<Label>完了</Label>
+						<Label>全て</Label>
+					</Labels>
+				</TabbedBar>
+			</View>
+		</Window>
+	</NavigationWindow>
+</Alloy>
